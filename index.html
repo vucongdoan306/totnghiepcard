@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="popup-comfirm" id="popupComfirm">
+        <div class="row">
+          <div class="header1">Nhập tên:</div>
+          <input
+            type="text"
+            name="name"
+            id="name-person"
+            class="input-name"
+            placeholder="nhập tên của bạn"
+          />
+        </div>
+
+        <div class="row mgt-10">
+          <div class="header1">Bạn là:</div>
+          <div class="row2">
+            <input
+              type="radio"
+              class="radio-input"
+              name="position"
+              value="ban"
+            />
+            Bạn
+          </div>
+          <div class="row2">
+            <input
+              type="radio"
+              class="radio-input"
+              name="position"
+              value="anh"
+            />
+            Anh
+          </div>
+          <div class="row2">
+            <input
+              type="radio"
+              class="radio-input"
+              name="position"
+              value="chi"
+            />
+            Chị
+          </div>
+          <div class="row2">
+            <input
+              type="radio"
+              class="radio-input"
+              name="position"
+              value="em"
+            />
+            Em
+          </div>
+          <div class="row2">
+            <input
+              type="radio"
+              class="radio-input"
+              name="position"
+              value="khac"
+            />
+            Khác
+          </div>
+        </div>
+
+        <div class="row1 row-flex-4 mgt-10">
+          <button onclick="onClickSubmit()">Đồng ý</button>
+        </div>
+      </div>
+      <div class="card-container" style="opacity: 0">
+        <div class="card-inner" id="main-card">
+          <div class="card-front" id="front-card" onclick="onClickFront()">
+            <p>Thiệp mời</p>
+          </div>
+          <div class="card-back">
+            <div class="card-back-container">
+              <div class="wallpaper-card">Vũ Thúy Hiền</div>
+              <div class="avatar-card"></div>
+              <div class="content-container">
+                <div class="header-content">Thiệp mời dự lễ tốt nghiệp</div>
+                <div class="border-150">
+                  <div></div>
+                </div>
+                <div class="main-content">
+                  <div id="content-1"></div>
+                  <div id="content-2">
+                    Note: Dù trời đổ 🌧 hay toả 🌤 vẫn phải đến nhé! 🤗 Love you❤
+                  </div>
+                </div>
+                <div class="bottom-content">
+                  <div class="bottom-content-left">
+
+                    <div class="date-start">11.am AUG | 06 | 2023</div>
+                  </div>
+                  <div class="bottom-content-right">
+                    <div class="address">
+                      Tại: Trung tâm Hội nghị Quốc gia, Phạm Hùng, Mễ Trì, Nam
+                      Từ Liêm, Hà Nội
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="script/script.js"></script>

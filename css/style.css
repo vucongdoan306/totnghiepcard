@@ -1,0 +1,362 @@
+@font-face {
+    font-family: Content-Font;
+    src: url("../fonts/DancingScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container-main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.popup-comfirm {
+    position: fixed;
+    height: 140px;
+    width: 400px;
+    background-color: #fff;
+    z-index: 10;
+    border-radius: 10px;
+    border: 2px solid #6A2C70;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    transition: all 1s;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.header1 {
+    flex: 2;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18px;
+    color: #111;
+}
+
+.row1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.row1 button {
+    background: #007bff;
+    height: 36px;
+    color: #fff;
+    outline: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    border: 1px solid #6A2C70;
+    font-family: Roboto;
+    font-weight: 500;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.row1 button:hover {
+    opacity: 0.8;
+}
+
+.input-name {
+    height: 32px;
+    margin: 10px;
+    color: #111;
+
+    flex: 7;
+    font-family: Roboto;
+    font-size: 18px;
+    padding: 2px 12px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #a86f6f;
+
+}
+
+.input-name:hover {
+    border: 1px solid #6A2C70;
+}
+
+.input-name:focus {
+    border: 1px solid #111;
+}
+
+.input-name::placeholder {
+    font-style: italic;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+
+    .card-container {
+        width: 600px;
+        height: 400px;
+        perspective: 1000px;
+    }
+}
+
+.card-container {
+    width: 800px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+/* .card-container:hover .card-inner {
+    transform: rotateY(180deg);
+} */
+
+.card-rotate {
+    transform: rotateY(180deg);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+#content-1 {
+    color: #111;
+    
+    padding: 0 60px;
+    font-family: 'Roboto';
+    font-weight: 600;
+
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #6A2C70;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 2px solid #6A2C70;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    border: 4px solid #6A2C70;
+    border-radius: 10px;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    flex-direction: column;
+}
+
+.wallpaper-card {
+    background-image: url("../assets/wallpaper.jpg");
+    height: 150px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-position: bottom;
+    background-size: 800px 470px;
+    border-bottom: 2px solid #6A2C70;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding-right: 20px;
+    color: #111;
+    font-family: 'Content-Font';
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.card-back-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.avatar-card {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-image: url("../assets/avatar.jpg");
+    background-position-x: -118px;
+    background-position-y: -253px;
+    background-repeat: no-repeat;
+    background-size: 388px 485px;
+    border: 2px solid #6A2C70;
+    border-radius: 50%;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(1.4);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-image: url("../assets/wallpaper2.jpg");
+    background-size: cover;
+}
+
+.header-content {
+    font-family: Content-Font;
+    color: #111;
+    padding-top: 80px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.border-150 {
+    display: flex;
+    justify-content: center;
+    height: 2px;
+}
+
+.border-150 div {
+    height: 2px;
+    width: 200px;
+    border-bottom: 2px solid #111;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.bottom-content {
+    display: flex;
+    height: 120px;
+}
+
+
+.logo-haui {
+    background-image: url("../assets/HAUI.jpg");
+    background-size: 108px 82px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-position-x: 80px;
+    background-position-y: 74px;
+}
+
+.top-bottom-content-left {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.name-haui {
+    font-family: Content-Font;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #111;
+}
+
+.bottom-content-left {
+    border-bottom-left-radius: 4px;
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-content-right {
+    border-bottom-right-radius: 4px;
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+
+.date-start {
+    font-family: Content-Font;
+    font-size: 24px;
+    color: #111;
+    padding-left: 75px;
+    font-weight: 500;
+}
+
+.address {
+    padding: 10px;
+    font-family: Content-Font;
+    color: #111;
+    font-size: 24px;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 62px;
+    border-left: 2px solid #111;
+}
+
+.row2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 7px;
+}
+
+
+.radio-input {
+    margin: 0 5px;
+}
+
+.dif {
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Roboto';
+    display: flex;
+
+}
+
+.dif1 {
+    flex: 2;
+}
+
+.row-flex-4 {
+    flex: 4;
+}
+
+.mgt-10{
+    margin-top: 10px;
+}
+
+#content-2{
+    color: rgb(158, 29, 29);
+    font-style: italic;
+    font-family: Roboto;
+    font-size: 14px;
+}
